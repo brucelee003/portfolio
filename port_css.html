@@ -1,0 +1,951 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lee | AI & Cybersecurity Specialist</title>
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #e6edf3;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #00d084;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #00d084;
+            margin-top: 12px;
+        }
+
+        h3 {
+            color: #00d084;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #aeb8c4;
+            margin-bottom: 18px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #202832;
+        }
+
+
+        /* =========================
+           HEADER / NAVIGATION
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11, 15, 20, 0.95);
+            border-bottom: 1px solid #202832;
+
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            color: #00d084;
+            font-size: 28px;
+        }
+
+        header p {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #c9d1d9;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d084;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            max-width: 1100px;
+        }
+
+        #home h2 {
+            font-size: 58px;
+            margin-bottom: 10px;
+        }
+
+        #home h2::after {
+            display: none;
+        }
+
+        #home h3 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        #home p {
+            max-width: 750px;
+            font-size: 18px;
+        }
+
+        #home a {
+            display: inline-block;
+
+            padding: 12px 22px;
+            margin-right: 10px;
+
+            border: 1px solid #00d084;
+            border-radius: 6px;
+
+            transition: 0.3s;
+        }
+
+        #home a:hover {
+            background: #00d084;
+            color: #06110c;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        #about p {
+            max-width: 900px;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        #skills {
+            background: #0e141b;
+            max-width: none;
+        }
+
+        #skills>* {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #skills h3 {
+            margin-top: 35px;
+        }
+
+        #skills ul {
+            list-style: none;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        #skills li {
+            background: #151c24;
+            border: 1px solid #26313c;
+
+            padding: 9px 16px;
+
+            border-radius: 5px;
+
+            color: #d5dde5;
+
+            transition: 0.3s;
+        }
+
+        #skills li:hover {
+            border-color: #00d084;
+            color: #00d084;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        #experience article {
+            background: #111820;
+
+            border: 1px solid #202b35;
+
+            padding: 25px;
+
+            margin-bottom: 25px;
+
+            border-left: 4px solid #00d084;
+
+            border-radius: 6px;
+        }
+
+        #experience ul {
+            padding-left: 20px;
+            color: #aeb8c4;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        #projects {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        #projects h2 {
+            grid-column: 1 / -1;
+        }
+
+        #projects article {
+            background: #111820;
+
+            border: 1px solid #202b35;
+
+            padding: 28px;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        #projects article:hover {
+            transform: translateY(-6px);
+
+            border-color: #00d084;
+
+            box-shadow: 0 10px 30px rgba(0, 208, 132, 0.08);
+        }
+
+        #projects article p:last-child {
+            color: #00d084;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================== */
+
+        #certifications {
+            background: #0e141b;
+            max-width: none;
+        }
+
+        #certifications h2,
+        #certifications ol {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #certifications ol {
+            padding-left: 25px;
+        }
+
+        #certifications li {
+            padding: 12px 0;
+            color: #c4ccd5;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        #education p {
+            max-width: 800px;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================== */
+
+        section:nth-last-of-type(2) {
+            text-align: center;
+        }
+
+        section:nth-last-of-type(2) ul {
+            list-style: none;
+
+            display: flex;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        section:nth-last-of-type(2) li {
+            background: #111820;
+
+            border: 1px solid #26313c;
+
+            padding: 20px 25px;
+
+            border-radius: 6px;
+
+            color: #cbd5df;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        #contact {
+            text-align: center;
+        }
+
+        #contact p {
+            font-size: 17px;
+        }
+
+        #contact h3 {
+            margin-top: 35px;
+        }
+
+        #contact a {
+            color: #00d084;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #070a0d;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            border-top: 1px solid #202832;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #home h2 {
+                font-size: 44px;
+            }
+
+            #projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 60px 20px;
+            }
+
+            #home {
+                min-height: 80vh;
+            }
+
+            #home h2 {
+                font-size: 38px;
+            }
+
+            #home h3 {
+                font-size: 22px;
+            }
+
+            #home p {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>Lee</h1>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#certifications">Certifications</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section id="home">
+
+            <h2>Hi, I'm Lee 👋</h2>
+
+            <h3>AI & Cybersecurity Specialist</h3>
+
+            <p>
+                I build practical solutions using Artificial Intelligence,
+                Automation, Cybersecurity, Software Testing and Web Technologies.
+            </p>
+
+            <p>
+                I focus on transforming emerging technologies into
+                practical solutions, intelligent workflows and
+                skill-driven learning experiences.
+            </p>
+
+            <p>
+
+                <a href="#projects">
+                    View Projects
+                </a>
+
+                <a href="#contact">
+                    Contact Me
+                </a>
+
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am an AI and Cybersecurity professional with experience
+                across Artificial Intelligence, Generative AI, AI Agents,
+                Automation, Software Testing and Web Development.
+            </p>
+
+            <p>
+                My work focuses on converting technology into practical
+                solutions through AI-powered automation, intelligent
+                agents, API integrations, testing frameworks and modern
+                web technologies.
+            </p>
+
+            <p>
+                I also mentor and train learners in emerging technologies,
+                helping them move from theoretical knowledge to
+                practical skills.
+            </p>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <h2>Technical Skills</h2>
+
+            <h3>Artificial Intelligence</h3>
+
+            <ul>
+                <li>Generative AI</li>
+                <li>LLMs</li>
+                <li>AI Agents</li>
+                <li>Agentic AI</li>
+                <li>RAG</li>
+                <li>Prompt Engineering</li>
+                <li>LangChain</li>
+                <li>LangGraph</li>
+                <li>MCP</li>
+                <li>Vector Databases</li>
+            </ul>
+
+
+            <h3>AI Automation</h3>
+
+            <ul>
+                <li>n8n</li>
+                <li>OpenClaw</li>
+                <li>Hermes Agent</li>
+                <li>Power Automate</li>
+                <li>UiPath</li>
+                <li>Zapier</li>
+                <li>API Integration</li>
+            </ul>
+
+
+            <h3>Programming & Development</h3>
+
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>Django</li>
+                <li>React</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>SQL</li>
+                <li>REST APIs</li>
+            </ul>
+
+
+            <h3>Testing & QA</h3>
+
+            <ul>
+                <li>Playwright</li>
+                <li>Selenium</li>
+                <li>Postman</li>
+                <li>JMeter</li>
+                <li>API Testing</li>
+                <li>E2E Testing</li>
+                <li>Regression Testing</li>
+            </ul>
+
+
+            <h3>Cybersecurity</h3>
+
+            <ul>
+                <li>Web Security</li>
+                <li>OWASP</li>
+                <li>OSINT</li>
+                <li>Nmap</li>
+                <li>Burp Suite</li>
+                <li>Wireshark</li>
+                <li>Metasploit</li>
+            </ul>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section id="experience">
+
+            <h2>Experience</h2>
+
+            <article>
+
+                <h3>AI & Cybersecurity Specialist</h3>
+
+                <p>
+                    Working across AI, Cybersecurity, Automation,
+                    Software Testing and Web Technologies.
+                </p>
+
+                <ul>
+
+                    <li>AI Agent development</li>
+
+                    <li>Agentic AI workflows</li>
+
+                    <li>AI automation</li>
+
+                    <li>API integration</li>
+
+                    <li>Web application testing</li>
+
+                    <li>Cybersecurity training</li>
+
+                    <li>Technical mentoring</li>
+
+                </ul>
+
+            </article>
+
+
+            <article>
+
+                <h3>Technical Trainer & Mentor</h3>
+
+                <p>
+                    Focused on practical technology education and
+                    industry-oriented skill development.
+                </p>
+
+                <ul>
+
+                    <li>1500+ students trained</li>
+
+                    <li>300+ faculties upskilled</li>
+
+                    <li>AI workshops</li>
+
+                    <li>Automation workshops</li>
+
+                    <li>Cybersecurity training</li>
+
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <h2>Featured Projects</h2>
+
+
+            <article>
+
+                <h3>01. AI Gmail Assistant</h3>
+
+                <p>
+                    AI-powered email automation system for understanding,
+                    processing and assisting with email workflows.
+                </p>
+
+                <p>
+                    n8n • AI Agent • Gmail API • LLM
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>02. WhatsApp AI Assistant</h3>
+
+                <p>
+                    Conversational AI assistant designed to interact with
+                    users and automate communication workflows.
+                </p>
+
+                <p>
+                    AI Agents • WhatsApp • APIs • Automation
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>03. AI Automation Platform</h3>
+
+                <p>
+                    Intelligent workflows connecting AI models,
+                    applications and APIs to automate repetitive tasks.
+                </p>
+
+                <p>
+                    n8n • APIs • LLMs • AI Agents
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>04. Playwright Testing Framework</h3>
+
+                <p>
+                    Automated testing framework for modern web applications
+                    using Playwright and TypeScript.
+                </p>
+
+                <p>
+                    Playwright • TypeScript • Chromium • Firefox • WebKit
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>05. College AI Assistant</h3>
+
+                <p>
+                    AI-powered assistant designed to answer college-related
+                    questions through an automated conversational workflow.
+                </p>
+
+                <p>
+                    n8n • AI Agent • APIs • LLM
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>06. Cybersecurity Assessment</h3>
+
+                <p>
+                    Practical web security assessment involving
+                    reconnaissance, vulnerability discovery and
+                    professional security reporting.
+                </p>
+
+                <p>
+                    Nmap • Burp Suite • OWASP • Wireshark
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- CERTIFICATIONS -->
+
+        <section id="certifications">
+
+            <h2>Certifications</h2>
+
+            <ol>
+
+                <li>
+                    Generative AI with Large Language Models
+                    — DeepLearning.AI & AWS
+                </li>
+
+                <li>
+                    AI Agents and Agentic AI
+                    — DeepLearning.AI
+                </li>
+
+                <li>
+                    Automation Testing
+                </li>
+
+                <li>
+                    Full Stack Python Developer
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <section>
+
+            <h2>Achievements</h2>
+
+            <ul>
+
+                <li>
+                    <strong>1500+</strong><br>
+                    Students Trained
+                </li>
+
+                <li>
+                    <strong>300+</strong><br>
+                    Faculties Upskilled
+                </li>
+
+                <li>
+                    AI & Automation<br>
+                    Workshops
+                </li>
+
+                <li>
+                    Cybersecurity<br>
+                    Training
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Interested in AI, Automation, Cybersecurity,
+                Software Testing or Web Development?
+            </p>
+
+            <p>
+                Let's connect and build something useful.
+            </p>
+
+            <h3>Contact</h3>
+
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="#" target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="#" target="_blank">
+                    GitHub Profile
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Lee. All Rights Reserved.
+        </p>
+
+        <p>
+            AI • Cybersecurity • Automation • Development
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
